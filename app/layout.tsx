@@ -228,19 +228,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var stored = localStorage.getItem('advorise-theme');
-                  var theme = stored || 'dark';
-                  if (theme === 'system') {
-                    theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-                  }
-                  document.documentElement.classList.add(theme);
-                  document.documentElement.setAttribute('data-theme', theme);
-                } catch(e) {}
-              })();
-            `,
+            __html: `document.documentElement.classList.add('light');`,
           }}
         />
         <script
@@ -251,14 +239,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         className={`
           ${inter.variable} font-sans antialiased
-          bg-white dark:bg-[#030E1C]
-          text-gray-900 dark:text-white
+          bg-white text-gray-900
         `}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
-          enableSystem
+          defaultTheme="light"
+          forcedTheme="light"
           storageKey="advorise-theme"
           disableTransitionOnChange={false}
         >

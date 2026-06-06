@@ -203,7 +203,7 @@ const affiliateModels = [
     glow: "shadow-sky-500/20",
     border: "hover:border-sky-500/40",
     iconBg: "bg-sky-500/10",
-    tagColor: "bg-sky-500/10 text-sky-600 dark:text-sky-400",
+    tagColor: "bg-sky-500/10 text-sky-600",
   },
   {
     icon: Smartphone,
@@ -255,7 +255,7 @@ const Label = ({ text }: { text: string }) => (
     <span className="w-4 h-4 rounded-full border-2 border-sky-500 flex items-center justify-center">
       <span className="w-1.5 h-1.5 bg-sky-500 rounded-full" />
     </span>
-    <span className="text-sky-600 dark:text-sky-400 font-semibold text-sm">{text}</span>
+    <span className="text-sky-600 font-semibold text-sm">{text}</span>
   </div>
 );
 
@@ -266,10 +266,10 @@ const StatItem = ({ value, suffix, label, trigger, delay = 0 }: {
   return (
     <ScaleIn delay={delay}>
       <div className="text-center group">
-        <div className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white tabular-nums group-hover:scale-110 transition-transform duration-300">
-          {count}<span className="text-sky-500 dark:text-sky-400">{suffix}</span>
+        <div className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 tabular-nums group-hover:scale-110 transition-transform duration-300">
+          {count}<span className="text-sky-500">{suffix}</span>
         </div>
-        <div className="text-gray-500 dark:text-white/40 text-xs uppercase tracking-widest font-semibold mt-2">
+        <div className="text-gray-500 text-xs uppercase tracking-widest font-semibold mt-2">
           {label}
         </div>
       </div>
@@ -280,11 +280,11 @@ const StatItem = ({ value, suffix, label, trigger, delay = 0 }: {
 const Marquee = () => {
   const items = [...ticker, ...ticker, ...ticker, ...ticker];
   return (
-    <div className="border-y border-gray-200 dark:border-white/8 bg-gray-50 dark:bg-[#040F1E] py-3.5 overflow-hidden select-none">
+    <div className="border-y border-gray-200 bg-gray-50 py-3.5 overflow-hidden select-none">
       <div className="flex gap-10 animate-marquee whitespace-nowrap w-max">
         {items.map((item, i) => (
           <span key={i}
-            className="inline-flex items-center gap-2.5 text-gray-400 dark:text-white/35 text-[11px] font-bold uppercase tracking-widest flex-shrink-0 hover:text-sky-500 dark:hover:text-sky-400 transition-colors duration-200">
+            className="inline-flex items-center gap-2.5 text-gray-400 text-[11px] font-bold uppercase tracking-widest flex-shrink-0 hover:text-sky-500 dark:hover:text-sky-400 transition-colors duration-200">
             <span className="w-1.5 h-1.5 bg-sky-500 rounded-full flex-shrink-0" />
             {item}
           </span>
@@ -322,23 +322,23 @@ export default function HomePage() {
   }, [videoOpen]);
 
   return (
-    <div className="bg-white dark:bg-[#030E1C] text-gray-900 dark:text-white overflow-x-hidden">
+    <div className="bg-white text-gray-900 overflow-x-hidden">
 
 {/* ══════════════════════════════ HERO ══════════════════════════════ */}
-<section className="relative min-h-[100svh] flex items-center justify-center pt-4 pb-6 overflow-hidden bg-[#020C1B]">
+<section className="relative min-h-[100svh] flex items-center justify-center pt-4 pb-6 overflow-hidden bg-white">
   <WaveCanvas />
 
   <div className="absolute inset-0 pointer-events-none"
-    style={{ background: 'radial-gradient(ellipse 90% 70% at 50% 50%, rgba(2,12,27,0.60) 0%, rgba(2,12,27,0.0) 100%)' }}
+    style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 40%, rgba(186,230,255,0.20) 0%, rgba(255,255,255,0.0) 100%)' }}
   />
 
   <div className="max-w-4xl mx-auto px-5 sm:px-8 w-full relative z-10 text-center">
 
     {/* Badge — updated: AI + Affiliate mention */}
     <div style={{ animation: "heroFadeIn 0.6s cubic-bezier(0.22,1,0.36,1) 0.05s both" }}>
-      <div className="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/25 rounded-full px-4 py-2 mb-6 hover:bg-sky-500/15 transition-colors duration-300 cursor-default">
-        <span className="w-1.5 h-1.5 bg-sky-400 rounded-full animate-pulse flex-shrink-0" />
-        <span className="text-sky-300 text-xs sm:text-sm font-semibold tracking-wide">
+      <div className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200 rounded-full px-4 py-2 mb-6 hover:bg-sky-100 transition-colors duration-300 cursor-default">
+        <span className="w-1.5 h-1.5 bg-sky-500 rounded-full animate-pulse flex-shrink-0" />
+        <span className="text-sky-700 text-xs sm:text-sm font-semibold tracking-wide">
           Meta & Google Certified · AI-Powered · CPS / CPL / CPI Affiliate
         </span>
       </div>
@@ -347,13 +347,13 @@ export default function HomePage() {
     {/* Headline */}
     <div style={{ animation: "heroFadeIn 0.7s cubic-bezier(0.22,1,0.36,1) 0.15s both" }}>
       <h1 className="text-[46px] sm:text-6xl lg:text-[80px] font-black leading-[1.03] mb-6 tracking-tight">
-        <span className="text-white">Performance</span>
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-300 animate-gradient">
+        <span className="text-gray-900">Performance</span>
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-500 animate-gradient">
           {" "}Marketing
         </span>
         <br />
-        <span className="text-white">That </span>
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-300 animate-gradient">
+        <span className="text-gray-900">That </span>
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-500 animate-gradient">
           Pays Back.
         </span>
       </h1>
@@ -361,7 +361,7 @@ export default function HomePage() {
 
     {/* Subtext — updated: AI + Affiliate */}
     <div style={{ animation: "heroFadeIn 0.7s cubic-bezier(0.22,1,0.36,1) 0.25s both" }}>
-      <p className="text-base sm:text-xl text-white/55 mb-10 max-w-2xl mx-auto leading-relaxed">
+      <p className="text-base sm:text-xl text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed">
         Advorise is a performance-first agency delivering AI-powered Google Ads, SEO,
         Affiliate Marketing (CPS, CPL, CPI) and full-funnel campaigns
         that generate real, measurable ROI — across every market.
@@ -373,11 +373,11 @@ export default function HomePage() {
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10">
         <Link href="/contact"
           className="inline-flex items-center justify-between gap-4
-                     bg-[#061828] border border-white/10 text-white font-bold
+                     bg-gray-900 border border-gray-800 text-white font-bold
                      pl-8 pr-2 py-2 rounded-full w-full sm:w-auto
-                     hover:border-sky-500/50 hover:bg-[#0A2035]
+                     hover:border-sky-500 hover:bg-gray-800
                      active:scale-95 transition-all duration-200
-                     shadow-xl shadow-black/40 text-sm sm:text-base group">
+                     shadow-xl shadow-gray-900/20 text-sm sm:text-base group">
           <span>Get Free Audit</span>
           <span className="w-11 h-11 rounded-full bg-sky-600 flex items-center justify-center flex-shrink-0
                            group-hover:bg-sky-500 group-hover:scale-105 transition-all duration-200
@@ -386,8 +386,8 @@ export default function HomePage() {
           </span>
         </Link>
         <a href={`tel:${PHONE}`}
-          className="inline-flex items-center justify-center gap-2 border border-white/10 text-white font-semibold px-7 py-4 rounded-full hover:bg-white/5 hover:border-sky-500/30 active:scale-95 transition-all duration-200 text-sm sm:text-base w-full sm:w-auto">
-          <Phone className="w-4 h-4 text-sky-400" /> {PHONE_DISP}
+          className="inline-flex items-center justify-center gap-2 border border-gray-200 text-gray-700 font-semibold px-7 py-4 rounded-full hover:bg-gray-50 hover:border-sky-400 active:scale-95 transition-all duration-200 text-sm sm:text-base w-full sm:w-auto">
+          <Phone className="w-4 h-4 text-sky-500" /> {PHONE_DISP}
         </a>
       </div>
     </div>
@@ -401,7 +401,7 @@ export default function HomePage() {
               className="w-12 h-12 rounded-full p-[2.5px] flex-shrink-0"
               style={{ background: 'linear-gradient(135deg, #0EA5E9, #22D3EE)' }}>
               <img src={src} alt="client"
-                className="w-full h-full rounded-full object-cover border-2 border-[#020C1B]"
+                className="w-full h-full rounded-full object-cover border-2 border-white"
               />
             </div>
           ))}
@@ -414,8 +414,8 @@ export default function HomePage() {
               />
             ))}
           </div>
-          <p className="text-white/45 text-xs">
-            <span className="text-white font-bold">450+</span> Five-Star Reviews
+          <p className="text-gray-500 text-xs">
+            <span className="text-gray-900 font-bold">450+</span> Five-Star Reviews
           </p>
         </div>
       </div>
@@ -430,11 +430,11 @@ export default function HomePage() {
         { label: "Experience", value: "7 Yrs" },
       ].map(({ label, value }, i) => (
         <div key={label}
-          className="bg-white/[0.04] border border-white/8 rounded-2xl p-4 text-center hover:border-sky-500/30 hover:-translate-y-0.5 transition-all duration-200 backdrop-blur-sm"
+          className="bg-white border border-gray-200 rounded-2xl p-4 text-center hover:border-sky-400 shadow-sm hover:-translate-y-0.5 transition-all duration-200 backdrop-blur-sm"
           style={{ animation: `heroFadeIn 0.5s ease ${0.5 + i * 0.08}s both` }}
         >
-          <div className="text-2xl font-black text-white">{value}</div>
-          <div className="text-white/35 text-xs mt-0.5">{label}</div>
+          <div className="text-2xl font-black text-gray-900">{value}</div>
+          <div className="text-gray-500 text-xs mt-0.5">{label}</div>
         </div>
       ))}
     </div>
@@ -463,11 +463,11 @@ export default function HomePage() {
                   />
                 </div>
                 <ScaleIn delay={200}>
-                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white dark:bg-[#071A2E] border border-sky-500/20 rounded-2xl px-7 py-4 text-center shadow-2xl shadow-black/10 dark:shadow-black/70 w-48 sm:w-56">
-                    <div className="text-4xl sm:text-5xl font-black text-gray-900 dark:text-white">
-                      7<span className="text-sky-500 dark:text-sky-400">+</span>
+                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white border border-sky-500/20 rounded-2xl px-7 py-4 text-center shadow-2xl shadow-black/10 dark:shadow-black/70 w-48 sm:w-56">
+                    <div className="text-4xl sm:text-5xl font-black text-gray-900">
+                      7<span className="text-sky-500">+</span>
                     </div>
-                    <div className="text-gray-400 dark:text-white/45 text-xs mt-1 leading-snug">
+                    <div className="text-gray-400 text-xs mt-1 leading-snug">
                       Years in Performance Marketing
                     </div>
                   </div>
@@ -478,25 +478,25 @@ export default function HomePage() {
             <FadeRight delay={100}>
               <Label text="Our Expertise" />
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.08] mb-6 tracking-tight">
-                <span className="text-gray-900 dark:text-white">Decisions</span><br />
-                <span className="text-sky-500 dark:text-sky-400">Backed by</span><br />
-                <span className="text-gray-900 dark:text-white">Data, Results</span><br />
-                <span className="text-sky-500 dark:text-sky-400">Backed by Us</span>
+                <span className="text-gray-900">Decisions</span><br />
+                <span className="text-sky-500">Backed by</span><br />
+                <span className="text-gray-900">Data, Results</span><br />
+                <span className="text-sky-500">Backed by Us</span>
               </h2>
-              <p className="text-gray-500 dark:text-white/55 mb-7 leading-relaxed text-sm sm:text-base">
+              <p className="text-gray-500 mb-7 leading-relaxed text-sm sm:text-base">
                 At Advorise, we engineer AI-powered digital marketing strategies — combining
                 performance advertising, affiliate campaigns, and data analytics for
                 zero-guesswork, compounding business growth.
               </p>
-              <p className="text-xs font-bold text-gray-400 dark:text-white/25 uppercase tracking-widest mb-4">
+              <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
                 What We Do Best
               </p>
               <div className="space-y-3 mb-8">
                 {expertise.map((item, i) => (
                   <FadeUp key={i} delay={i * 60}>
                     <div className="flex items-center gap-3 group">
-                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-sky-500 dark:text-sky-400 flex-shrink-0 group-hover:scale-110 transition-transform duration-200" />
-                      <span className="text-gray-600 dark:text-white/70 text-sm group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-200">{item}</span>
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-sky-500 flex-shrink-0 group-hover:scale-110 transition-transform duration-200" />
+                      <span className="text-gray-600 text-sm group-hover:text-gray-900 transition-colors duration-200">{item}</span>
                     </div>
                   </FadeUp>
                 ))}
@@ -512,7 +512,7 @@ export default function HomePage() {
       </section>
 
       {/* ════════════════════ AI-POWERED MARKETING (NEW) ═════════════════ */}
-      <section className="py-20 lg:py-24 bg-[#020C1B] relative overflow-hidden">
+      <section className="py-20 lg:py-24 bg-gray-50 relative overflow-hidden">
         {/* BG effects */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-40 left-1/4 w-[500px] h-[300px] bg-sky-600/10 rounded-full blur-[120px]" />
@@ -525,17 +525,17 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
           <FadeUp className="text-center mb-12 lg:mb-16">
             {/* AI badge */}
-            <div className="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/20 rounded-full px-4 py-1.5 mb-5">
-              <Bot className="w-3.5 h-3.5 text-sky-400" />
-              <span className="text-sky-300 text-xs font-semibold tracking-wide uppercase">Powered by Artificial Intelligence</span>
+            <div className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200 rounded-full px-4 py-1.5 mb-5">
+              <Bot className="w-3.5 h-3.5 text-sky-500" />
+              <span className="text-sky-700 text-xs font-semibold tracking-wide uppercase">Powered by Artificial Intelligence</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-3">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-3">
               Marketing That{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-400">
                 Thinks for Itself
               </span>
             </h2>
-            <p className="text-white/45 max-w-xl mx-auto text-sm mt-2 px-4">
+            <p className="text-gray-500 max-w-xl mx-auto text-sm mt-2 px-4">
               Every campaign we run is backed by AI — smarter bidding, faster testing,
               and real-time optimisation that never sleeps.
             </p>
@@ -544,20 +544,20 @@ export default function HomePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {aiFeatures.map(({ icon: Icon, title, desc, tag }, i) => (
               <ScaleIn key={i} delay={i * 80}>
-                <div className="group bg-white/[0.04] border border-white/8 rounded-2xl p-5 sm:p-6 hover:border-sky-500/40 hover:bg-white/[0.07] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/10 h-full flex flex-col">
+                <div className="group bg-white border border-gray-200 rounded-2xl p-5 sm:p-6 hover:border-sky-400 hover:bg-gray-50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/10 h-full flex flex-col">
                   {/* Tag */}
-                  <div className="inline-flex items-center gap-1.5 bg-sky-500/15 border border-sky-500/20 rounded-full px-2.5 py-1 mb-4 w-fit">
-                    <span className="w-1 h-1 bg-sky-400 rounded-full" />
-                    <span className="text-sky-300 text-[10px] font-bold uppercase tracking-wider">{tag}</span>
+                  <div className="inline-flex items-center gap-1.5 bg-sky-50 border border-sky-200 rounded-full px-2.5 py-1 mb-4 w-fit">
+                    <span className="w-1 h-1 bg-sky-500 rounded-full" />
+                    <span className="text-sky-700 text-[10px] font-bold uppercase tracking-wider">{tag}</span>
                   </div>
                   {/* Icon */}
                   <div className="w-10 h-10 bg-sky-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-sky-500/20 group-hover:scale-110 transition-all duration-300">
-                    <Icon className="w-5 h-5 text-sky-400 group-hover:rotate-6 transition-transform duration-300" />
+                    <Icon className="w-5 h-5 text-sky-500 group-hover:rotate-6 transition-transform duration-300" />
                   </div>
-                  <h3 className="font-bold text-white mb-2 text-[14px] sm:text-[15px] group-hover:text-sky-300 transition-colors duration-200">
+                  <h3 className="font-bold text-gray-900 mb-2 text-[14px] sm:text-[15px] group-hover:text-sky-600 transition-colors duration-200">
                     {title}
                   </h3>
-                  <p className="text-white/40 text-xs leading-relaxed flex-1">{desc}</p>
+                  <p className="text-gray-500 text-xs leading-relaxed flex-1">{desc}</p>
                 </div>
               </ScaleIn>
             ))}
@@ -565,13 +565,13 @@ export default function HomePage() {
 
           {/* Bottom CTA strip */}
           <FadeUp delay={300}>
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 bg-white/[0.03] border border-white/8 rounded-2xl px-6 py-5">
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 bg-white border border-gray-200 rounded-2xl px-6 py-5 shadow-sm">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-sky-500/15 rounded-lg flex items-center justify-center">
-                  <Sparkles className="w-4 h-4 text-sky-400" />
+                  <Sparkles className="w-4 h-4 text-sky-500" />
                 </div>
-                <p className="text-white/60 text-sm">
-                  <span className="text-white font-bold">AI is not a buzzword for us</span> — it's how every rupee of your budget gets maximised.
+                <p className="text-gray-600 text-sm">
+                  <span className="text-gray-900 font-bold">AI is not a buzzword for us</span> — it's how every rupee of your budget gets maximised.
                 </p>
               </div>
               <Link href="/contact"
@@ -584,17 +584,17 @@ export default function HomePage() {
       </section>
 
       {/* ════════════════════════════ SERVICES ═══════════════════════════ */}
-      <section className="py-20 lg:py-24 bg-gray-50 dark:bg-[#040F1E]">
+      <section className="py-20 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <FadeUp className="text-center mb-12 lg:mb-16">
             <Label text="What We Offer" />
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-3">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-3">
               Everything You Need to{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-400 dark:from-sky-400 dark:to-cyan-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-400">
                 Grow Online
               </span>
             </h2>
-            <p className="text-gray-400 dark:text-white/40 max-w-xl mx-auto text-sm mt-2 px-4">
+            <p className="text-gray-400 max-w-xl mx-auto text-sm mt-2 px-4">
               AI-powered, full-service capability — from Google Ads and SEO to Affiliate
               Marketing (CPS / CPL / CPI) across every digital channel.
             </p>
@@ -605,16 +605,16 @@ export default function HomePage() {
               <ScaleIn key={i} delay={i * 70}>
                 <Link
                   href={href}
-                  className="group bg-white dark:bg-[#071828] border border-gray-200 dark:border-white/5 rounded-2xl p-5 sm:p-6 hover:border-sky-500/50 hover:bg-gray-50 dark:hover:bg-[#0A2035] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/10 h-full shadow-sm dark:shadow-none flex flex-col"
+                  className="group bg-white border border-gray-200 rounded-2xl p-5 sm:p-6 hover:border-sky-500/50 hover:bg-gray-50 dark:hover:bg-[#0A2035] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/10 h-full shadow-sm flex flex-col"
                 >
                   <div className="w-10 h-10 bg-sky-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-sky-500/20 group-hover:scale-110 transition-all duration-300">
-                    <Icon className="w-5 h-5 text-sky-500 dark:text-sky-400 group-hover:rotate-6 transition-transform duration-300" />
+                    <Icon className="w-5 h-5 text-sky-500 group-hover:rotate-6 transition-transform duration-300" />
                   </div>
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-2 text-[14px] sm:text-[15px] group-hover:text-sky-600 dark:group-hover:text-sky-300 transition-colors duration-200">
+                  <h3 className="font-bold text-gray-900 mb-2 text-[14px] sm:text-[15px] group-hover:text-sky-600 transition-colors duration-200">
                     {title}
                   </h3>
-                  <p className="text-gray-400 dark:text-white/40 text-xs leading-relaxed flex-1">{desc}</p>
-                  <div className="mt-4 flex items-center text-sky-500 dark:text-sky-400 text-xs font-semibold opacity-0 group-hover:opacity-100 translate-x-[-8px] group-hover:translate-x-0 transition-all duration-300">
+                  <p className="text-gray-400 text-xs leading-relaxed flex-1">{desc}</p>
+                  <div className="mt-4 flex items-center text-sky-500 text-xs font-semibold opacity-0 group-hover:opacity-100 translate-x-[-8px] group-hover:translate-x-0 transition-all duration-300">
                     Learn more <ChevronRight className="w-3.5 h-3.5 ml-0.5" />
                   </div>
                 </Link>
@@ -633,13 +633,13 @@ export default function HomePage() {
 
           <FadeUp className="text-center mb-12 lg:mb-16">
             <Label text="Affiliate Marketing" />
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-3">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-3">
               Pay Only for{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-400 dark:from-sky-400 dark:to-cyan-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-400">
                 Real Results
               </span>
             </h2>
-            <p className="text-gray-400 dark:text-white/40 max-w-2xl mx-auto text-sm mt-2 px-4">
+            <p className="text-gray-400 max-w-2xl mx-auto text-sm mt-2 px-4">
               Advorise runs AI-optimised affiliate campaigns across three proven
               performance models — zero wasted budget, 100% outcome-based billing.
             </p>
@@ -649,7 +649,7 @@ export default function HomePage() {
           <div className="grid sm:grid-cols-3 gap-5 lg:gap-6 mb-12">
             {affiliateModels.map(({ icon: Icon, model, title, desc, tags, gradient, glow, border, iconBg, tagColor }, i) => (
               <ScaleIn key={i} delay={i * 100}>
-                <div className={`group bg-white dark:bg-[#071828] border border-gray-200 dark:border-white/5 rounded-2xl p-6 sm:p-7 ${border} hover:-translate-y-2 hover:shadow-xl ${glow} transition-all duration-300 h-full flex flex-col shadow-sm dark:shadow-none`}>
+                <div className={`group bg-white border border-gray-200 rounded-2xl p-6 sm:p-7 ${border} hover:-translate-y-2 hover:shadow-xl ${glow} transition-all duration-300 h-full flex flex-col shadow-sm`}>
                   {/* Model badge */}
                   <div className="flex items-center justify-between mb-5">
                     <div className={`w-12 h-12 ${iconBg} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -660,8 +660,8 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <h3 className="font-black text-gray-900 dark:text-white text-lg mb-2">{title}</h3>
-                  <p className="text-gray-500 dark:text-white/50 text-sm leading-relaxed mb-5 flex-1">{desc}</p>
+                  <h3 className="font-black text-gray-900 text-lg mb-2">{title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-5 flex-1">{desc}</p>
 
                   {/* Industry tags */}
                   <div className="flex flex-wrap gap-1.5">
@@ -678,7 +678,7 @@ export default function HomePage() {
 
           {/* Bottom info strip */}
           <FadeUp delay={200}>
-            <div className="bg-gray-50 dark:bg-[#071828] border border-gray-200 dark:border-white/5 rounded-2xl p-6 sm:p-8">
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8">
               <div className="grid sm:grid-cols-3 gap-6 text-center">
                 {[
                   { value: "0 Upfront", label: "No Setup Risk", sub: "Pay only when results happen" },
@@ -686,9 +686,9 @@ export default function HomePage() {
                   { value: "All Niches", label: "Flexible Verticals", sub: "E-commerce, apps, leads & more" },
                 ].map(({ value, label, sub }, i) => (
                   <div key={i} className="group">
-                    <div className="text-2xl font-black text-gray-900 dark:text-white mb-1 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">{value}</div>
-                    <div className="text-sm font-bold text-gray-700 dark:text-white/70">{label}</div>
-                    <div className="text-xs text-gray-400 dark:text-white/35 mt-0.5">{sub}</div>
+                    <div className="text-2xl font-black text-gray-900 mb-1 group-hover:text-sky-600 transition-colors">{value}</div>
+                    <div className="text-sm font-bold text-gray-700">{label}</div>
+                    <div className="text-xs text-gray-400 mt-0.5">{sub}</div>
                   </div>
                 ))}
               </div>
@@ -705,7 +705,7 @@ export default function HomePage() {
       </section>
 
       {/* ═════════════════════════════ STATS ═════════════════════════════ */}
-      <div ref={statsSection.ref} className="py-16 lg:py-20 border-y border-gray-200 dark:border-white/8 relative overflow-hidden">
+      <div ref={statsSection.ref} className="py-16 lg:py-20 border-y border-gray-200 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[200px] bg-sky-500/5 dark:bg-sky-500/[0.07] rounded-full blur-[80px]" />
         </div>
@@ -727,22 +727,22 @@ export default function HomePage() {
           <FadeUp className="text-center mb-12 lg:mb-16">
             <Label text="How It Works" />
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black">
-              <span className="text-gray-900 dark:text-white">Simple. </span>
-              <span className="text-sky-500 dark:text-sky-400">Transparent. </span>
-              <span className="text-gray-900 dark:text-white">Effective.</span>
+              <span className="text-gray-900">Simple. </span>
+              <span className="text-sky-500">Transparent. </span>
+              <span className="text-gray-900">Effective.</span>
             </h2>
           </FadeUp>
 
           <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {process.map(({ step, title, desc }, i) => (
               <FadeUp key={i} delay={i * 120}>
-                <div className="relative flex lg:block gap-5 lg:gap-0 bg-white dark:bg-[#071828] border border-gray-200 dark:border-white/5 rounded-2xl p-5 sm:p-7 hover:border-sky-500/40 hover:shadow-xl hover:shadow-sky-500/8 transition-all duration-300 hover:-translate-y-2 h-full shadow-sm dark:shadow-none group">
+                <div className="relative flex lg:block gap-5 lg:gap-0 bg-white border border-gray-200 rounded-2xl p-5 sm:p-7 hover:border-sky-500/40 hover:shadow-xl hover:shadow-sky-500/8 transition-all duration-300 hover:-translate-y-2 h-full shadow-sm group">
                   <div className="text-5xl sm:text-6xl font-black text-sky-500/15 group-hover:text-sky-500/25 transition-colors duration-300 tabular-nums flex-shrink-0 lg:mb-4 leading-none">
                     {step}
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 dark:text-white mb-1.5 text-sm sm:text-base group-hover:text-sky-600 dark:group-hover:text-sky-300 transition-colors duration-200">{title}</h3>
-                    <p className="text-gray-400 dark:text-white/45 text-xs sm:text-sm leading-relaxed">{desc}</p>
+                    <h3 className="font-bold text-gray-900 mb-1.5 text-sm sm:text-base group-hover:text-sky-600 transition-colors duration-200">{title}</h3>
+                    <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{desc}</p>
                   </div>
                   {i < 3 && (
                     <div className="hidden lg:block absolute top-7 left-full w-full h-px z-10 overflow-hidden">
@@ -757,20 +757,20 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════ TESTIMONIALS ═════════════════════════ */}
-      <section className="py-20 lg:py-24 bg-gray-50 dark:bg-[#040F1E]">
+      <section className="py-20 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <FadeUp className="text-center mb-12 lg:mb-14">
             <Label text="Client Stories" />
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black">
-              <span className="text-gray-900 dark:text-white">Results That </span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-400 dark:from-sky-400 dark:to-cyan-300">
+              <span className="text-gray-900">Results That </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-400">
                 Speak for Us
               </span>
             </h2>
           </FadeUp>
 
           <FadeUp delay={100} className="max-w-2xl lg:max-w-3xl mx-auto">
-            <div className="bg-white dark:bg-[#071828] border border-gray-200 dark:border-white/5 rounded-3xl p-7 sm:p-10 relative overflow-hidden shadow-sm dark:shadow-none">
+            <div className="bg-white border border-gray-200 rounded-3xl p-7 sm:p-10 relative overflow-hidden shadow-sm">
               <div className="absolute top-0 right-0 w-48 h-48 bg-sky-700/5 rounded-full blur-2xl pointer-events-none" />
               <Quote className="w-10 h-10 text-sky-500/15 absolute top-6 right-6" />
               <div className="flex gap-1 mb-5">
@@ -781,16 +781,16 @@ export default function HomePage() {
                 ))}
               </div>
               <p key={activeT}
-                className="text-gray-700 dark:text-white/80 text-base sm:text-xl leading-relaxed mb-7 italic relative z-10"
+                className="text-gray-700 text-base sm:text-xl leading-relaxed mb-7 italic relative z-10"
                 style={{ animation: "testimonialIn 0.5s cubic-bezier(0.22,1,0.36,1) both" }}>
                 {testimonials[activeT].text}
               </p>
               <div className="flex items-center justify-between gap-4">
                 <div style={{ animation: "testimonialIn 0.5s cubic-bezier(0.22,1,0.36,1) 0.1s both" }}>
-                  <div className="font-black text-gray-900 dark:text-white text-sm sm:text-base">
+                  <div className="font-black text-gray-900 text-sm sm:text-base">
                     {testimonials[activeT].name}
                   </div>
-                  <div className="text-sky-600 dark:text-sky-400 text-xs sm:text-sm mt-0.5">
+                  <div className="text-sky-600 text-xs sm:text-sm mt-0.5">
                     {testimonials[activeT].role}
                   </div>
                 </div>
@@ -819,12 +819,12 @@ export default function HomePage() {
               <div className="flex items-end justify-between mb-10 lg:mb-12">
                 <div>
                   <Label text="Insights" />
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 dark:text-white">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900">
                     From the Advorise Blog
                   </h2>
                 </div>
                 <Link href="/blogs"
-                  className="hidden sm:inline-flex items-center gap-1 text-sky-600 dark:text-sky-400 font-semibold hover:text-sky-500 dark:hover:text-sky-300 transition-colors text-sm flex-shrink-0 group">
+                  className="hidden sm:inline-flex items-center gap-1 text-sky-600 font-semibold hover:text-sky-500 dark:hover:text-sky-300 transition-colors text-sm flex-shrink-0 group">
                   View All
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                 </Link>
@@ -836,7 +836,7 @@ export default function HomePage() {
                 <FadeUp key={post.id} delay={i * 120}>
                   <Link
                     href={`/${post.slug}`}
-                    className="group block bg-white dark:bg-[#071828] border border-gray-200 dark:border-white/5 rounded-2xl overflow-hidden hover:border-sky-500/40 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/8 transition-all duration-300 h-full flex flex-col shadow-sm dark:shadow-none"
+                    className="group block bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-sky-500/40 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/8 transition-all duration-300 h-full flex flex-col shadow-sm"
                   >
                     <div className="aspect-video overflow-hidden flex-shrink-0">
                       {post._embedded?.['wp:featuredmedia']?.[0]?.source_url ? (
@@ -847,22 +847,22 @@ export default function HomePage() {
                         />
                       ) : (
                         <div className="w-full h-full bg-gradient-to-br from-sky-100 dark:from-sky-900/30 to-cyan-100 dark:to-cyan-900/10 flex items-center justify-center">
-                          <BookOpen className="w-10 h-10 text-sky-400 dark:text-sky-500/30 group-hover:scale-110 transition-transform duration-300" />
+                          <BookOpen className="w-10 h-10 text-sky-400/30 group-hover:scale-110 transition-transform duration-300" />
                         </div>
                       )}
                     </div>
                     <div className="p-5 sm:p-6 flex flex-col flex-1">
-                      <div className="text-gray-400 dark:text-white/50 text-xs mb-3 flex items-center gap-1.5">
+                      <div className="text-gray-400 text-xs mb-3 flex items-center gap-1.5">
                         <Calendar className="w-3.5 h-3.5 text-sky-500 flex-shrink-0" />
                         {fmtDate(post.date)}
                       </div>
-                      <h3 className="font-bold text-gray-900 dark:text-white mb-2 group-hover:text-sky-600 dark:group-hover:text-sky-300 transition-colors duration-200 line-clamp-2 text-sm flex-1">
+                      <h3 className="font-bold text-gray-900 mb-2 group-hover:text-sky-600 transition-colors duration-200 line-clamp-2 text-sm flex-1">
                         {post.title.rendered}
                       </h3>
-                      <p className="text-gray-400 dark:text-white/40 text-xs line-clamp-2 mb-4 leading-relaxed">
+                      <p className="text-gray-400 text-xs line-clamp-2 mb-4 leading-relaxed">
                         {stripHtml(post.excerpt.rendered)}
                       </p>
-                      <div className="inline-flex items-center text-sky-600 dark:text-sky-400 text-xs font-semibold group-hover:text-sky-500 dark:group-hover:text-sky-300 transition-colors">
+                      <div className="inline-flex items-center text-sky-600 text-xs font-semibold group-hover:text-sky-500 transition-colors">
                         Read More
                         <ChevronRight className="w-4 h-4 ml-0.5 group-hover:translate-x-1 transition-transform duration-200" />
                       </div>
@@ -874,7 +874,7 @@ export default function HomePage() {
 
             <div className="text-center mt-8 sm:hidden">
               <Link href="/blogs"
-                className="inline-flex items-center gap-2 border border-sky-500/30 text-sky-600 dark:text-sky-400 px-6 py-3 rounded-xl text-sm font-semibold hover:bg-sky-500/10 transition-all">
+                className="inline-flex items-center gap-2 border border-sky-500/30 text-sky-600 px-6 py-3 rounded-xl text-sm font-semibold hover:bg-sky-500/10 transition-all">
                 View All Articles <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -883,21 +883,20 @@ export default function HomePage() {
       )}
 
       {/* ══════════════════════════ BOTTOM CTA ═══════════════════════════ */}
-      <section className="py-20 lg:py-28 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-sky-900/35 to-cyan-900/25" />
-          <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-sky-500/50 to-transparent" />
-          <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-sky-500/50 to-transparent" />
-          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-sky-600/15 rounded-full blur-[120px] animate-pulse-slow" />
+      <section className="py-20 lg:py-28 relative overflow-hidden bg-gradient-to-br from-sky-50 to-cyan-50">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-sky-300 to-transparent" />
+          <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-sky-300 to-transparent" />
+          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-sky-200/50 rounded-full blur-[120px] animate-pulse-slow" />
         </div>
         <FadeUp className="max-w-2xl mx-auto px-5 sm:px-6 text-center relative z-10">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4">
             Ready to{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-cyan-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-500">
               Scale Smarter?
             </span>
           </h2>
-          <p className="text-white/55 text-sm sm:text-base mb-8 leading-relaxed">
+          <p className="text-gray-600 text-sm sm:text-base mb-8 leading-relaxed">
             Join 450+ businesses already growing with Advorise — AI-powered ads,
             affiliate campaigns (CPS/CPL/CPI), and zero-guesswork performance marketing.
             Free audit, no obligation.
@@ -908,9 +907,9 @@ export default function HomePage() {
               Get Free Audit
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
             </Link>
-                        <a href={`tel:${PHONE}`}
-              className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-semibold px-8 py-4 rounded-2xl hover:bg-white/10 hover:-translate-y-0.5 active:scale-95 transition-all duration-200 text-sm sm:text-base">
-              <Phone className="w-4 h-4" /> {PHONE_DISP}
+            <a href={`tel:${PHONE}`}
+              className="inline-flex items-center justify-center gap-2 border border-sky-300 text-gray-700 font-semibold px-8 py-4 rounded-2xl hover:bg-white hover:-translate-y-0.5 active:scale-95 transition-all duration-200 text-sm sm:text-base">
+              <Phone className="w-4 h-4 text-sky-500" /> {PHONE_DISP}
             </a>
           </div>
         </FadeUp>

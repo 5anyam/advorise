@@ -354,24 +354,8 @@ img, video, svg {
   color: rgba(255,255,255,0.65);
 }
 html {
-  background-color: #0B0B0F;
-  color-scheme: dark light;
-}
-
-html.light {
   background-color: #ffffff;
   color-scheme: light;
-}
-/* globals.css */
-
-/* Force dark background immediately — flash prevent */
-html.dark {
-  background-color: #0F0F15 !important;
-}
-
-html.dark body {
-  background-color: #0B0B0F !important;
-  color: #ffffff !important;
 }
 @keyframes heroFadeIn {
   from { opacity: 0; transform: translateY(24px); }
