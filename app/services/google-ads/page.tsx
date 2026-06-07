@@ -152,7 +152,7 @@ export default function GoogleAdsPage() {
             <div className="flex flex-col sm:flex-row gap-3 mb-7">
               <Link href="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-violet-600 text-white font-bold px-7 py-4 rounded-2xl hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-xl shadow-blue-500/25 text-sm group">
-                Get Free Audit <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                Get in Touch <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a href={`tel:${PHONE}`}
                 className="inline-flex items-center justify-center gap-2 border border-gray-200 dark:border-white/10 text-gray-800 dark:text-white font-semibold px-7 py-4 rounded-2xl hover:bg-gray-50 dark:hover:bg-white/5 transition-all text-sm">

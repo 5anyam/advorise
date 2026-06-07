@@ -77,7 +77,7 @@ const budgets = [
 const steps = [
   { step: "01", title: "Submit Form",       desc: "Fill out the form and we'll receive your details instantly." },
   { step: "02", title: "Discovery Call",    desc: "A 30-min call to understand your goals, competition, and current setup." },
-  { step: "03", title: "Free Audit",        desc: "We audit your current digital presence and identify growth opportunities." },
+  { step: "03", title: "Digital Review",     desc: "We review your current digital presence and identify key growth opportunities." },
   { step: "04", title: "Strategy & Quote",  desc: "You receive a clear strategy and transparent pricing — no obligation." },
 ];
 
@@ -164,7 +164,7 @@ export default function ContactPage() {
             <div className="inline-flex items-center gap-2 bg-violet-500/10 border border-violet-500/20 rounded-full px-4 py-1.5 mb-5">
               <MessageSquare className="w-3.5 h-3.5 text-violet-500" />
               <span className="text-violet-700 dark:text-violet-300 text-xs font-semibold">
-                Free Audit · No Obligation · Reply in 4 Hours
+                No Obligation · Clear Strategy · Reply in 4 Hours
               </span>
             </div>
 
@@ -183,7 +183,7 @@ export default function ContactPage() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              {["Free Audit Included", "No Lock-in Contracts", "Response in 4 Hours", "Pan India + International"].map((b) => (
+              {["No Lock-in Contracts", "Clear Strategy Provided", "Response in 4 Hours", "Pan India + International"].map((b) => (
                 <div key={b} className="flex items-center gap-1.5 text-xs text-gray-500 dark:text-white/50 font-medium">
                   <CheckCircle className="w-3.5 h-3.5 text-green-500 flex-shrink-0" /> {b}
                 </div>
@@ -413,7 +413,7 @@ export default function ContactPage() {
                     ) : (
                       <>
                         <Send className="w-4 h-4" />
-                        Send Message & Get Free Audit
+                        Send Message & Get in Touch
                       </>
                     )}
                   </button>
@@ -590,7 +590,7 @@ export default function ContactPage() {
               className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-black px-8 py-4 rounded-2xl hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-xl shadow-violet-500/25 text-sm group"
             >
               <Zap className="w-4 h-4" />
-              Get Free Audit Now
+              Get in Touch Now
             </a>
             <a
               href={`tel:${PHONE}`}

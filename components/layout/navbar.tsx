@@ -277,7 +277,7 @@ export function Navbar() {
               
               <Link href="/contact"
                 className="inline-flex items-center gap-1.5 bg-gradient-to-r from-sky-600 to-cyan-500 text-white text-[13px] font-bold px-4 py-2 rounded-xl hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-md shadow-sky-500/25 whitespace-nowrap">
-                <Zap className="w-3.5 h-3.5" /> Free Audit
+                <Zap className="w-3.5 h-3.5" /> Get in Touch
               </Link>
             </div>
 
@@ -409,7 +409,7 @@ export function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/contact" onClick={closeAll}
               className="flex items-center justify-center gap-2 bg-gradient-to-r from-sky-600 to-cyan-500 text-white font-bold py-4 text-sm hover:opacity-90 active:scale-[0.99] transition-all w-full">
-              <Zap className="w-4 h-4" /> GET FREE AUDIT NOW
+              <Zap className="w-4 h-4" /> GET IN TOUCH
             </Link>
             <a href={`tel:${PHONE}`}
               className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white py-3.5 text-sm font-bold transition-colors w-full">

@@ -521,7 +521,7 @@ export default function AffiliateMarketingPage() {
                     </div>
                     <Link href="/contact"
                       className="flex items-center justify-center gap-2 bg-white text-sky-600 font-bold py-2.5 px-4 rounded-xl text-sm hover:bg-white/90 transition-all w-full shadow-sm">
-                      Get Free Audit <ArrowRight className="w-3.5 h-3.5" />
+                      Get in Touch <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
                 </div>

@@ -348,12 +348,12 @@ export default function BlogsPage() {
           <div>
             <p className="font-black text-gray-900 dark:text-white text-lg">Ready to put this into action?</p>
             <p className="text-gray-500 dark:text-white text-sm mt-1">
-              Get a free audit from our team and see exactly where your business can grow.
+              Talk to our team and see exactly where your business can grow.
             </p>
           </div>
           <Link href="/contact"
             className="flex-shrink-0 inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-bold px-7 py-3.5 rounded-2xl hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-lg shadow-violet-500/25 text-sm group">
-            Get Free Audit
+            Get in Touch
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

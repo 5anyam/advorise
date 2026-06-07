@@ -218,14 +218,14 @@ export default async function BlogPostPage({
               Ready to grow your business?
             </p>
             <p className="text-gray-500 dark:text-white text-sm mt-0.5">
-              Get a free audit from our performance marketing team.
+              Talk to our performance marketing experts today.
             </p>
           </div>
           <Link
             href="/contact"
             className="flex-shrink-0 inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-bold px-6 py-3 rounded-2xl hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-lg shadow-violet-500/25 text-sm group"
           >
-            Get Free Audit
+            Get in Touch
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

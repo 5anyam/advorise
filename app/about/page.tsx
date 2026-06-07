@@ -501,7 +501,7 @@ export default function AboutPage() {
               href="/contact"
               className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-sky-600 to-cyan-600 text-white font-black px-8 py-4 rounded-2xl hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-xl shadow-sky-500/30 text-sm group"
             >
-              Get Free Audit
+              Get in Touch
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a

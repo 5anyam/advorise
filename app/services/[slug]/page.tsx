@@ -321,7 +321,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                     <div className="pt-4 space-y-2.5">
                       <Link href="/contact"
                         className="flex items-center justify-center gap-2 bg-gradient-to-r from-sky-500 to-cyan-500 text-white font-bold py-3 px-5 rounded-xl text-sm hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-md shadow-sky-500/20 w-full">
-                        Get Free Audit
+                        Get in Touch
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                       <p className="text-[11px] text-gray-400 text-center">
@@ -383,7 +383,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
                 {/* Contact Form */}
                 <div style={{ animation: "fadeSlideLeft 0.7s ease 0.35s both" }}>
                   <ContactForm
-                    title="Request a Free Audit"
+                    title="Start a Conversation"
                     showServices={false}
                     className="border border-gray-200 rounded-2xl shadow-sm"
                   />

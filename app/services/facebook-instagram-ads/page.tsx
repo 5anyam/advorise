@@ -262,7 +262,7 @@ export default function FacebookInstagramAdsPage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/contact"
               className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-black px-8 py-4 rounded-2xl hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-xl shadow-pink-500/25 text-sm group">
-              Get Free Audit <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              Get in Touch <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a href={`tel:${PHONE}`}
               className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-bold px-8 py-4 rounded-2xl hover:bg-white/10 transition-all text-sm">

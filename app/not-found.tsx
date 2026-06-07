@@ -120,7 +120,7 @@ export default function NotFound() {
           <Link href="/contact"
             className="flex-shrink-0 inline-flex items-center gap-2 bg-gradient-to-r from-sky-600 to-cyan-600 text-white font-bold px-5 py-2.5 rounded-xl hover:opacity-90 transition-all shadow-md shadow-sky-500/20 text-sm group">
             <Zap className="w-3.5 h-3.5" />
-            Get Free Audit
+            Get in Touch
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
