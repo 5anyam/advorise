@@ -50,7 +50,7 @@ function Logo({ size = "md" }: { size?: "sm" | "md" }) {
       alt="Advorise"
       className={cn(
         "object-contain select-none",
-        size === "md" ? "h-9 w-auto" : "h-7 w-auto"
+        size === "md" ? "h-14 w-auto" : "h-11 w-auto"
       )}
     />
   );
@@ -219,7 +219,7 @@ export function Navbar() {
           : "bg-white dark:bg-black border-b border-gray-100 dark:border-white/[0.06]"
       )}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-14 gap-4">
+          <div className="flex items-center justify-between h-16 gap-4">
 
             <Link href="/" onClick={closeAll} className="flex-shrink-0">
               <Logo size="md" />
