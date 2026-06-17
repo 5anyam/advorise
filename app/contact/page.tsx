@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 const PHONE      = "+919999207132";
 const PHONE_DISP = "+91 9999207132";
 const EMAIL      = "marketing@advorise.com";
-const ADDRESS    = "NU-95A, Pitampura, New Delhi - 110034 , India";
+const ADDRESS    = "MU-75, Second Floor, Pitampura, New Delhi - 110034, India";
 
 // ─── Data ──────────────────────────────────────────────────────
 const contactInfo = [

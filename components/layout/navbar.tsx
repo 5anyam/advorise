@@ -50,7 +50,7 @@ function Logo({ size = "md" }: { size?: "sm" | "md" }) {
       alt="Advorise"
       className={cn(
         "object-contain select-none",
-        size === "md" ? "h-14 w-auto" : "h-11 w-auto"
+        size === "md" ? "h-16 w-auto" : "h-12 w-auto"
       )}
     />
   );

@@ -84,7 +84,7 @@ export function Footer() {
                 <div className="flex items-start gap-3">
                   <MapPin className="h-4 w-4 text-sky-500 mt-0.5 flex-shrink-0" />
                   <div className="text-sm text-gray-500 leading-snug">
-                    NU-95A, Pitampura, New Delhi - 110034, India
+                    MU-75, Second Floor, Pitampura, New Delhi - 110034, India
                   </div>
                 </div>
 
@@ -236,7 +236,7 @@ export function Footer() {
         <div className="border-t border-gray-200 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-xs text-center md:text-left">
-              © {new Date().getFullYear()} Advorise Digital LLP. All rights reserved.
+              © {new Date().getFullYear()} Advorise Digital. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2">
               {[
